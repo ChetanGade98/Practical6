@@ -552,5 +552,101 @@ Configure it to display completed tasks (e.g., issues with status "Done" or simi
 Now, your Jira dashboard will show all open issues, active sprints, and completed tasks, offering a comprehensive view of the project's status.
 
 
+55555
+5
+5555555555.5.5.5.5
+1. Jira Navigation:
+
+To find the sprint backlog and the active sprint board in Jira:
+
+Sprint Backlog:
+
+1. Go to your Jira dashboard.
+
+
+2. Click on "Projects" in the navigation bar.
+
+
+3. Select the project you're working on.
+
+
+4. Navigate to the "Backlog" section in the sidebar.
+
+
+5. Here you can see the Sprint Backlog for the current sprint or any upcoming ones.
+
+
+
+Active Sprint Board:
+
+1. From your Jira dashboard, go to "Projects".
+
+
+2. Select the same project.
+
+
+3. In the sidebar, click on "Active sprints".
+
+
+4. This will show the active sprint board, where you can track the current sprint's progress and tasks.
+
+
+
+
+2. Git Commit:
+
+If you've made changes to a file but haven't staged or committed them yet, follow these steps:
+
+1. Stage the file(s):
+
+git add <file_name>  # For a specific file
+# Or use `git add .` to stage all modified files
+
+
+2. Commit the changes with a descriptive message:
+
+git commit -m "Descriptive message explaining the changes"
+
+
+
+3. Git Merge:
+
+To merge a feature branch into the main branch and ensure a smooth merge, follow these steps:
+
+1. Switch to the main branch (assuming it’s named main):
+
+git checkout main
+
+
+2. Make sure your main branch is up to date:
+
+git pull origin main
+
+
+3. Merge the feature branch into the main branch:
+
+git merge <feature-branch-name>
+
+
+4. Resolve any merge conflicts if they occur. Git will mark conflicted files, and you'll need to edit them manually.
+
+
+5. Stage and commit the resolved conflicts if there were any:
+
+git add <conflicted-file>
+git commit -m "Resolved merge conflict"
+
+
+6. Push the changes to the remote repository:
+
+git push origin main
+
+
+
+This ensures a smooth and conflict-free merge (if no conflicts exist).
+
+666666666..666666666666
+
+
 
 
