@@ -950,6 +950,229 @@ git push origin main
 
 
 This method ensures the hotfix can be completed and deployed without interfering with the ongoing feature development.
+222211111
+q
+q
+q
+q
+qqq
+
+
+Jira Setup & Navigation
+
+1. Set up a Jira Cloud instance and navigate to the project board:
+
+Set up Jira Cloud:
+
+Sign up for a Jira Cloud account by visiting Atlassian's website.
+
+Once signed in, you can create a new Jira Cloud instance by clicking on "Create new site" and following the prompts.
+
+
+Navigate to the project board:
+
+After logging in, go to the "Projects" menu in the top navigation bar and select "Create project."
+
+Choose the project type (e.g., Scrum, Kanban, or another template) and fill in the project details.
+
+Once the project is created, you’ll be taken to the project board. If not, select the project from the "Projects" dropdown.
+
+
+
+
+2. Navigate to the sprint backlog and active sprint board:
+
+From your project board, click on Backlog in the left-hand sidebar. This shows the Sprint Backlog.
+
+To view the active sprint board, click on Active Sprint in the left-hand sidebar, where you'll see the tasks currently in progress for the sprint.
+
+
+
+3. Configure a Kanban board and customize columns:
+
+Go to your Jira project.
+
+Click on Board settings (in the top-right corner).
+
+Under Columns, you can customize the board by adding or removing columns, as well as mapping statuses to each column (e.g., To Do, In Progress, Done).
+
+Drag statuses into the respective columns as required, or click on Add column to create new ones.
+
+
+
+4. Create and configure a new Scrum project in Jira:
+
+From the Projects dropdown, select Create project.
+
+Choose Scrum as the project template.
+
+Enter the project name, key, and any other required details.
+
+Click Create to generate the Scrum project.
+
+After the project is created, you can configure the boards, sprints, and backlog under the project settings.
+
+
+
+5. Create a dashboard to show open issues, active sprints, and completed tasks:
+
+Navigate to Dashboards in the top navigation bar and select Create dashboard.
+
+Choose a layout, and give the dashboard a name.
+
+Add gadgets like:
+
+Filter Results (for open issues).
+
+Sprint Health (to display the current sprint).
+
+Pie Chart or Created vs. Resolved Chart (to display completed tasks).
+
+
+Configure the gadgets to show data based on your project and desired filters.
+
+
+
+6. Create a dashboard for sprint progress and issue breakdown by status:
+
+Follow the same steps as above to create a new dashboard.
+
+Add the following gadgets:
+
+Sprint Health or Burndown Chart (to track sprint progress).
+
+Issue Statistics (to show issues broken down by status like "To Do," "In Progress," "Done").
+
+Customize filters for your specific project or sprint as needed.
+
+
+
+
+
+
+---
+
+Jira Issue Management & Filters
+
+7. Create an issue, classify it under an epic, and assign it to a developer:
+
+Go to your Project and click Create in the top menu.
+
+In the Issue Type field, select the appropriate issue type (e.g., Bug).
+
+Under the Epic Link field, select the appropriate Epic.
+
+Assign the issue to a developer in the Assignee field.
+
+Fill in other details (priority, description, etc.) and click Create.
+
+
+
+8. Create a critical issue, set priority to "High," and assign it to a developer:
+
+Click Create in the top menu.
+
+In the Priority field, select "High."
+
+Assign it to the developer using the Assignee field.
+
+Provide other relevant details, such as description, and click Create.
+
+
+
+9. Create a JQL filter to track high-priority issues:
+
+Go to Issues in the top menu and click on Search for issues.
+
+In the search bar, use the following JQL query:
+
+priority = High AND project = "Your Project Name" AND status != Done
+
+Save the filter by clicking on Save as and give it a name (e.g., "High Priority Issues").
+
+
+
+10. Create a JQL filter and share it with the team:
+
+Follow the same steps as above to create a filter.
+
+After saving the filter, click Details and then Share.
+
+You can share the filter with a specific group or project team by choosing the appropriate permissions.
+
+
+
+11. Create an epic and link relevant stories to it:
+
+Go to the Backlog of your project.
+
+On the left-hand side, click Create Epic and provide details like name and description.
+
+To link stories, edit the story and set the Epic Link field to the created Epic.
+
+
+
+12. Create a Jira story and assign it to the development team:
+
+Click Create from the top menu.
+
+In the Issue Type field, select Story.
+
+Provide relevant details such as the story description.
+
+Assign it to the development team or a specific developer in the Assignee field.
+
+Click Create.
+
+
+
+
+
+---
+
+Jira Sprint & Epic Management
+
+13. Create a sprint and move backlog items into it:
+
+Go to the Backlog of your project.
+
+Click Create Sprint in the backlog section.
+
+Drag and drop items (user stories, tasks) into the sprint.
+
+When ready, click Start Sprint to begin the sprint.
+
+
+
+14. Close the sprint and move incomplete tasks to the next sprint:
+
+Go to Active Sprint and click on Complete Sprint.
+
+Jira will ask if you want to move incomplete issues to the next sprint. Confirm this option, and any remaining issues will be carried over.
+
+
+
+15. Onboard new members and assign project roles:
+
+Go to Jira settings > User Management > Invite users.
+
+Enter their email addresses and assign them appropriate roles (e.g., Developer, Scrum Master).
+
+Make sure to provide them with access to the correct projects and boards.
+
+
+
+16. Set up a new Scrum project for a client and configure permissions:
+
+Create a new Scrum project as described above.
+
+After creating the project, go to Project settings > Permissions.
+
+Assign the appropriate roles (e.g., Project Lead, Developer) to the client's team members and set up permissions to restrict or allow access as necessary.
+
+
+
+
 
 
 
