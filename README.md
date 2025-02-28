@@ -861,6 +861,96 @@ Set WIP (Work In Progress) limits: You can limit how many issues can be in a col
 3. Save Changes: After configuring the columns, save your changes, and your Kanban board will reflect the new layout for tracking bugs or any issues.
 
 
+8888.8.8.888888888
+
+1. JQL Search:
+
+To find all Jira issues assigned to you with the status "In Progress," you can use the following JQL query:
+
+assignee = currentUser() AND status = "In Progress"
+
+This query searches for issues where the assignee is the current user (you) and the status is "In Progress."
+
+
+---
+
+2. Jira Story Creation:
+
+To create a Jira story based on a product owner's description, follow these steps:
+
+1. Navigate to the "Create Issue" page in Jira.
+
+
+2. Select "Story" as the issue type.
+
+
+3. Fill in the following fields:
+
+Summary: A brief description of the feature (e.g., "Add new search functionality").
+
+Description: A detailed explanation of the feature as described by the product owner (e.g., "The new search functionality will allow users to filter results by category, date, and relevance").
+
+Priority: Set the priority based on the urgency (e.g., "High").
+
+Assignee: Assign it to the development team or the relevant developer.
+
+Labels/Components: Optionally, add labels or components to categorize the story (e.g., "Search," "UI").
+
+Story Points (optional): If using Agile, assign an estimate of the effort required.
+
+
+
+4. Click "Create" to create the story.
+
+
+
+
+---
+
+3. Git Branching:
+
+To create a separate branch for the hotfix while keeping the feature branch in progress, follow these steps:
+
+1. Switch to the main branch (or master branch):
+
+git checkout main
+
+
+2. Pull the latest changes from the remote repository to ensure the main branch is up to date:
+
+git pull origin main
+
+
+3. Create a new branch for the hotfix:
+
+git checkout -b hotfix/branch-name
+
+
+4. Make the necessary changes for the hotfix, commit them, and push the changes to the remote repository:
+
+git add .
+git commit -m "Fix issue with XYZ"
+git push origin hotfix/branch-name
+
+
+5. Once the hotfix is ready, merge it into the main branch:
+
+git checkout main
+git pull origin main
+git merge hotfix/branch-name
+
+
+6. Push the changes back to the remote main branch:
+
+git push origin main
+
+
+7. The feature branch remains unaffected by the hotfix since the changes for the hotfix were made in a separate branch. If needed, rebase or merge the feature branch later.
+
+
+
+This method ensures the hotfix can be completed and deployed without interfering with the ongoing feature development.
+
 
 
 
