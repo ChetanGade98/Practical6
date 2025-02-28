@@ -760,6 +760,108 @@ resolution = Unresolved ensures that only issues that are still open (i.e., not 
 
 This will return all issues in the active sprint that are still open (i.e., have not been resolved yet).
 
+777777.7.777
+
+1. Git Commit:
+
+To add changes to a file and commit them with a descriptive message, you can follow these steps:
+
+1. Stage the file: Use the git add command to stage the modified file. If you want to stage a specific file:
+
+git add <file-name>
+
+Or, if you want to add all changed files:
+
+git add .
+
+
+2. Commit the changes: After staging the changes, commit them with a descriptive message:
+
+git commit -m "Your descriptive commit message"
+
+
+
+This sequence stages the changes and commits them to the local repository with a message describing the modifications.
+
+
+---
+
+2. Git Pull:
+
+To pull the latest changes from the main branch into your current branch without conflicts:
+
+1. Fetch the latest changes: First, make sure you have the latest data from the remote repository:
+
+git fetch
+
+
+2. Pull the changes from main: Assuming your teammate pushed updates to the main branch, you can pull them into your current branch (let's say you're working on a feature branch) using:
+
+git pull origin main
+
+Git will attempt to merge the changes from the main branch into your current branch. If there are no conflicts, it will merge automatically. If there are conflicts, Git will prompt you to resolve them manually.
+
+If conflicts occur:
+
+1. Resolve the conflicts in the affected files.
+
+
+2. After resolving, mark them as resolved:
+
+git add <file-with-conflict>
+
+
+3. Complete the merge by committing:
+
+git commit -m "Resolved merge conflicts"
+
+
+
+
+
+
+
+---
+
+3. Jira Board Configuration (Kanban Board for Bug Tracking):
+
+To configure a Kanban board in Jira and customize its columns for bug tracking:
+
+1. Create or Modify a Kanban Board:
+
+Go to Jira Software and select your project.
+
+Navigate to the Board section (on the sidebar).
+
+If you need to create a new board, click Create Board, then choose Kanban. If modifying an existing board, click on the board settings.
+
+Choose Kanban as the board type if creating a new board.
+
+Set the project or filter that the board should display.
+
+
+
+2. Customize Columns:
+
+Once the Kanban board is set up, go to the Board Settings by clicking the ellipsis (three dots) in the top-right corner of the board and selecting Board Settings.
+
+Under Columns, you can customize the columns. Jira will typically have columns like To Do, In Progress, and Done, but you can modify them to suit your team’s workflow:
+
+Add a column: Click Add Column to add a new column for specific statuses.
+
+Rename columns: You can edit the names of existing columns to reflect your process better.
+
+Assign status to columns: Jira allows you to map Jira issue statuses (e.g., "Open", "In Progress", "Resolved") to these columns. Customize the columns to show the appropriate statuses.
+
+Set WIP (Work In Progress) limits: You can limit how many issues can be in a column at any time (for example, a limit on "In Progress" issues).
+
+
+
+
+3. Save Changes: After configuring the columns, save your changes, and your Kanban board will reflect the new layout for tracking bugs or any issues.
+
+
+
 
 
 
