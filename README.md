@@ -646,6 +646,120 @@ git push origin main
 This ensures a smooth and conflict-free merge (if no conflicts exist).
 
 666666666..666666666666
+1. GitHub Setup (Creating a GitHub Repository with README.md and .gitignore for Java):
+
+To set up a GitHub repository for a Java project with a README.md and .gitignore, follow these steps:
+
+1. Create the Repository:
+
+Go to GitHub and log in.
+
+Click on the "+" button on the top-right corner and select "New repository."
+
+Provide a repository name and description, choose public/private visibility, and check "Initialize this repository with a README."
+
+Click on "Create repository."
+
+
+
+2. Add .gitignore for Java:
+
+Once the repository is created, click on the "Add file" button and select "Create new file."
+
+Name the file .gitignore.
+
+Inside the .gitignore file, you can use a predefined Java .gitignore template, which typically looks like:
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+/target/
+/bin/
+/build/
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+Commit the .gitignore file.
+
+
+
+3. Edit the README.md:
+
+You can modify the existing README.md to include a brief description of the project, its purpose, and usage instructions.
+
+
+
+4. Push Local Project (Optional):
+
+If you're working with a local project, you can push it to this GitHub repository:
+
+git init
+git remote add origin <repository-url>
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+
+
+
+
+---
+
+2. Jira Epic Creation:
+
+To create an Epic in Jira and link relevant stories/tasks to it:
+
+1. Create the Epic:
+
+In Jira, go to the project where you want to create the Epic.
+
+Navigate to the "Backlog" view.
+
+On the left sidebar, you'll see an option for "EPICS." Click on it.
+
+Click the "Create Epic" button or "Create Issue" and select "Epic" as the issue type.
+
+Fill in the Epic details such as Summary (Title), Description, and any other necessary fields.
+
+Click "Create."
+
+
+
+2. Link Stories to the Epic:
+
+Once the Epic is created, open the individual stories you want to link to the Epic.
+
+In the issue details, find the "Epic Link" field (typically in the right panel).
+
+Select the relevant Epic from the dropdown list or search for it by name and link it.
+
+
+Alternatively, you can bulk-edit multiple stories from the backlog and assign them to the Epic at once.
+
+
+
+
+---
+
+3. JQL Search for Open Issues in the Current Sprint:
+
+To find all issues that are still open in the current sprint, you can use the following JQL (Jira Query Language) query:
+
+sprint in openSprints() AND resolution = Unresolved
+
+sprint in openSprints() filters issues in the current active sprint.
+
+resolution = Unresolved ensures that only issues that are still open (i.e., not resolved) are included.
+
+
+This will return all issues in the active sprint that are still open (i.e., have not been resolved yet).
+
 
 
 
