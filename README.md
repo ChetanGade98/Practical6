@@ -1171,6 +1171,174 @@ After creating the project, go to Project settings > Permissions.
 Assign the appropriate roles (e.g., Project Lead, Developer) to the client's team members and set up permissions to restrict or allow access as necessary.
 
 
+444445555.....
+
+JQL Search Queries
+
+17. Find all Jira issues assigned to you with the status "In Progress":
+
+
+
+assignee = currentUser() AND status = "In Progress"
+
+18. Find all issues in the current sprint that are still open:
+
+
+
+sprint in openSprints() AND status != "Done"
+
+19. Find all issues with the label "Bug" that were created in the last 7 days:
+
+
+
+labels = "Bug" AND created >= -7d
+
+20. Find all issues assigned to you, excluding those with the status "Done":
+
+
+
+assignee = currentUser() AND status != "Done"
+
+Git & GitHub Basics
+
+21. Set up Git and link it with your GitHub username and email:
+
+
+
+Install Git:
+
+On macOS, use: brew install git
+
+On Linux, use: sudo apt-get install git
+
+On Windows, download from the Git website and install.
+
+
+Configure Git with your username and email:
+
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+
+
+22. Update your Git configuration with a new email address:
+
+
+
+git config --global user.email "newemail@example.com"
+
+23. Initialize a Git repository and link it to your GitHub repository:
+
+
+
+git init
+git remote add origin https://github.com/username/repository.git
+
+24. Create a new branch, switch to it, and push it to GitHub:
+
+
+
+git checkout -b new-feature-branch
+git push -u origin new-feature-branch
+
+25. Create a new branch, switch to it, and merge it back once the feature is complete:
+
+
+
+Create and switch to the branch:
+
+git checkout -b new-feature
+
+Work on the feature and commit changes.
+
+Switch to the main branch and merge:
+
+git checkout main
+git merge new-feature
+
+
+26. Create a separate branch for the hotfix and merge it into main:
+
+
+
+Create a hotfix branch:
+
+git checkout -b hotfix-branch
+
+Apply the hotfix and commit.
+
+Switch to the main branch and merge:
+
+git checkout main
+git merge hotfix-branch
+
+Push the changes:
+
+git push origin main
+
+
+Git Commit, Merge & Push Operations
+
+27. Stage all changes, commit them with a message, and push to GitHub:
+
+
+
+git add .
+git commit -m "Your commit message"
+git push origin main
+
+28. Stage specific files, commit them with a message, and push to GitHub:
+
+
+
+git add path/to/file1 path/to/file2
+git commit -m "Your commit message"
+git push origin main
+
+29. Add a file and commit the changes with a descriptive message:
+
+
+
+git add path/to/file
+git commit -m "Descriptive message about the changes"
+
+30. Merge a feature branch into the main branch:
+
+
+
+Switch to the main branch:
+
+git checkout main
+
+Merge the feature branch:
+
+git merge feature-branch
+
+Push the changes:
+
+git push origin main
+
+
+31. Merge a feature branch into main without fast-forwarding:
+
+
+
+git checkout main
+git merge --no-ff feature-branch
+git push origin main
+
+32. Delete the feature branch both locally and on GitHub:
+
+
+
+Delete the branch locally:
+
+git branch -d feature-branch
+
+Delete the branch on GitHub:
+
+git push origin --delete feature-branch
+
+
 
 
 
