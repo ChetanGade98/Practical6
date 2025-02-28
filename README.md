@@ -241,4 +241,187 @@ git pull origin main
 
 This process ensures you work on isolated features without affecting the main codebase until everything is ready for integration.
 
+3333.33333333333333.333333333
+
+1. Git Installation and Configuration:
+
+To install Git and link it with your GitHub account, follow these steps:
+
+a. Install Git:
+
+For Windows:
+
+1. Download the Git installer from the official site: Git for Windows.
+
+
+2. Run the installer and follow the installation prompts (you can accept the default settings).
+
+
+
+For macOS:
+
+1. Open the Terminal and type git --version. If Git is not installed, it will prompt you to install it via Xcode Command Line Tools. Follow the on-screen instructions.
+
+
+
+For Linux:
+
+Debian/Ubuntu: Run sudo apt install git.
+
+Fedora: Run sudo dnf install git.
+
+Arch: Run sudo pacman -S git.
+
+
+
+b. Configure Git with your GitHub account:
+
+1. Open your terminal/command prompt.
+
+
+2. Set your username and email address:
+
+git config --global user.name "Your GitHub Username"
+git config --global user.email "your-email@example.com"
+
+
+3. To verify your configurations, run:
+
+git config --global --list
+
+
+
+c. Link Git to GitHub (using SSH or HTTPS):
+
+Using HTTPS (simple method):
+
+Clone a repository with:
+
+git clone https://github.com/username/repository.git
+
+GitHub will prompt for your username and password (you may want to use a GitHub token instead of your password).
+
+
+Using SSH (more secure method):
+
+1. Generate an SSH key:
+
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+
+
+2. Add the SSH key to the ssh-agent:
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+
+3. Add the public key to your GitHub account:
+
+Copy the public key: cat ~/.ssh/id_rsa.pub.
+
+Go to GitHub > Settings > SSH and GPG Keys > New SSH Key.
+
+
+
+4. Test the connection:
+
+ssh -T git@github.com
+
+
+
+
+2. Jira Issue Creation:
+
+To create an issue in Jira and classify it under the appropriate epic, follow these steps:
+
+a. Create the Issue:
+
+1. Log in to your Jira account.
+
+
+2. Click on the "Create" button (usually located in the top navigation bar).
+
+
+3. Fill out the following fields:
+
+Project: Select the project you're working on.
+
+Issue Type: Choose the issue type, for example, Bug (since it's a bug).
+
+Summary: Provide a brief title for the bug (e.g., "App crashes when clicking the login button").
+
+Description: Give a detailed description of the bug and steps to reproduce it.
+
+Priority: Set the priority (e.g., Critical, Major, Minor).
+
+
+
+
+b. Assign the Issue to a Developer:
+
+1. Under the Assignee field, select the developer responsible for fixing the bug.
+
+
+2. Alternatively, if you're unsure, you can leave it unassigned or select the default assignee.
+
+
+
+c. Classify the Issue under the Appropriate Epic:
+
+1. Look for the Epic Link field (typically in the right panel or within the "More Fields" section).
+
+
+2. Select the correct Epic from the dropdown list to link the bug to an existing epic.
+
+
+
+d. Create the Issue:
+
+1. After filling in all necessary fields, click Create.
+
+
+
+3. Jira Filter Creation:
+
+To create a Jira Query Language (JQL) filter for tracking high-priority issues, follow these steps:
+
+a. Navigate to Filters:
+
+1. Go to the Filters tab in Jira (usually at the top).
+
+
+2. Click on Advanced issue search to open the search screen.
+
+
+
+b. Create the JQL Filter:
+
+1. In the JQL search box, enter the following query to track only high-priority issues:
+
+priority in (High, Urgent) AND resolution = Unresolved ORDER BY created DESC
+
+This will filter issues that are either "High" or "Urgent" priority and have not been resolved yet, ordered by the creation date.
+
+You can modify the filter based on the exact priorities or other criteria specific to your project.
+
+
+
+c. Save the Filter:
+
+1. After running the search, click on the Save As button.
+
+
+2. Give your filter a name (e.g., "High-Priority Unresolved Issues").
+
+
+3. Optionally, add a description for the filter.
+
+
+4. Click Save.
+
+
+
+You can now access this saved filter from the Filters tab in the future and even share it with your team.
+
+
 
