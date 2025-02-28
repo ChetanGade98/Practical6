@@ -423,5 +423,134 @@ c. Save the Filter:
 
 You can now access this saved filter from the Filters tab in the future and even share it with your team.
 
+4444444..4.4.4.4.44444444
+
+1. Local Git Initialization and Linking to GitHub Repository:
+
+To initialize a Git repository and link it to your GitHub repository, follow these steps:
+
+1. Navigate to your project folder: Open a terminal or command prompt and navigate to your project folder.
+
+cd /path/to/your/project
+
+
+2. Initialize Git in your project: Initialize an empty Git repository in your project folder.
+
+git init
+
+
+3. Add remote GitHub repository: Link your local repository to the remote GitHub repository. Replace <repository-url> with your GitHub repository URL.
+
+git remote add origin https://github.com/username/repository-name.git
+
+
+4. Add files and commit: Add all files to the staging area and commit them.
+
+git add .
+git commit -m "Initial commit"
+
+
+5. Push the changes to GitHub: Push your local commits to the remote GitHub repository.
+
+git push -u origin master  # or main if that's your default branch
+
+
+
+
+---
+
+2. Git Push and Pull:
+
+To pull the updates from GitHub without losing your work, follow these steps:
+
+1. Ensure your local changes are committed: First, commit any local changes you have made.
+
+git add .
+git commit -m "Your commit message"
+
+
+2. Pull the updates from GitHub: Before pulling, it's a good practice to check if your local branch is ahead of the remote branch.
+
+git fetch origin
+
+
+3. Resolve conflicts (if any): Now, you can pull the changes from GitHub and Git will attempt to merge the changes with your local files.
+
+git pull origin master  # or main if that's your default branch
+
+If there are any merge conflicts, Git will prompt you to resolve them manually. After resolving conflicts:
+
+git add .
+git commit -m "Resolved merge conflicts"
+
+
+4. Push your local changes back to GitHub: Once you've resolved the merge, you can push your local changes back to GitHub.
+
+git push origin master  # or main if that's your default branch
+
+
+
+
+---
+
+3. Creating a Jira Dashboard:
+
+To create a Jira dashboard that shows open issues, active sprints, and completed tasks, follow these steps:
+
+1. Navigate to your Jira Dashboard:
+
+Log in to Jira.
+
+Click on "Dashboards" from the top menu.
+
+Click on "Create New Dashboard."
+
+
+
+2. Configure Dashboard Settings:
+
+Provide a name for your dashboard (e.g., "Project Overview").
+
+Set visibility options depending on whether you want the dashboard to be shared with specific users, groups, or remain private.
+
+Click "Create."
+
+
+
+3. Add Gadgets to the Dashboard: After creating the dashboard, you can start adding gadgets to display the relevant information.
+
+For Open Issues:
+
+Click "Add Gadget" and search for the "Filter Results" gadget.
+
+Configure the gadget to show open issues by selecting an appropriate filter (e.g., issues with status "Open," "To Do," or similar).
+
+
+For Active Sprints:
+
+Add a "Sprint Health" or "Agile Sprint" gadget.
+
+Configure it to display the details of the active sprints for your project.
+
+
+For Completed Tasks:
+
+Add a "Filter Results" gadget again.
+
+Configure it to display completed tasks (e.g., issues with status "Done" or similar).
+
+
+
+
+4. Save and Arrange: After adding these gadgets, you can arrange them on the dashboard by dragging them into the desired positions.
+
+
+5. Save and Share the Dashboard: Once you are satisfied with the layout, click Save. If you want to share the dashboard with others, ensure you configure the permissions accordingly.
+
+
+
+Now, your Jira dashboard will show all open issues, active sprints, and completed tasks, offering a comprehensive view of the project's status.
+
+
 
 
