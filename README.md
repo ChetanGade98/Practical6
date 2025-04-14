@@ -1,5 +1,4 @@
 # Practical6
-Here are the detailed answers to both questions:
 
 Q1. Git Scenario - Project Initialization
 
@@ -74,8 +73,6 @@ resolution = EMPTY is more accurate when filtering for unresolved issues.
 
 Set 2
 
-Here are the detailed answers to both questions:
-
 Q1. GitHub Scenario – Team Collaboration
 
 Steps:
@@ -135,6 +132,45 @@ identify workflow bottlenecks
 Build automation rules based on transitions
 
 Set 3
+
+Q1. Git Scenario – Branching & Pull Request (PR)
+Scenario: You're working on a new search feature in a shared GitHub project.
+
+Steps:
+
+1. Create a new branch named search-feature
+git checkout -b search-feature
+
+2. Make your changes and push the branch to GitHub
+git add .
+git commit -m "Added search feature"
+git push origin search-feature
+
+3. Open a Pull Request (PR) on GitHub
+Go to the repo on GitHub
+You'll see a prompt to open a PR for the search-feature branch
+Click "Compare & pull request"
+Add title and description of the feature
+Assign a reviewer from your team (right sidebar in PR window)
+
+4. Merge the PR after review is approved
+Once the reviewer approves the PR
+Click "Merge pull request"
+Optionally delete the branch after merging
+
+Q2. JQL – Created, Updated & Transitioned Filter Queries
+a. Issues created between March 1 and March 10, 2025
+created >= "2025-03-01" AND created <= "2025-03-10"
+b. Issues updated within the last 3 days
+updated >= -3d
+
+c. Issues that transitioned from "In Progress" to "Testing" after April 1, 2025
+status CHANGED FROM "In Progress" TO "Testing" AFTER "2025-04-01"
+Difference: updated >= -3d vs created >= -3d
+Tip: Use updated for tracking activity or progress, and created to identify recent backlog entries or incoming tasks.
+
+Set 3
+
 
 
 
