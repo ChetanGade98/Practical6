@@ -400,7 +400,67 @@ on a dashboard ensures Team-A sees and resolves blockers quickly.
 
 Set 8
 
+Q1. GitHub Scenario – Fork and Contribute
+If you want to contribute to an open-source project, follow these steps:
 
+1. Fork the Repository
+Go to the GitHub page of the repository you want to contribute to.
+Click the “Fork” button (usually top-right).
+GitHub will create a copy of that repository under your own account.
+
+2. Clone Your Fork
+On your forked repository page, click “Code” > Copy the HTTPS or SSH URL.
+Run this command in your terminal:
+git clone https://github.com/your-username/repository-name.git
+Move into the project folder:
+cd repository-name
+
+3. Create a Branch, Make Changes, and Push
+Create a new branch for your changes:
+git checkout -b feature/your-branch-name
+
+Make your code or documentation changes.
+Stage and commit your changes:
+git add .
+git commit -m "Describe your change"
+Push the branch to your fork:
+git push origin feature/your-branch-name
+
+4. Open a Pull Request (PR) to the Original Repository
+Go to your fork on GitHub.
+Click “Compare & pull request” for the branch you pushed.
+Add a title and description of what you changed.
+Make sure the base repository is the original one and the base branch is correct (usually main or master).
+Click “Create pull request”.
+The maintainers of the project will now review and potentially merge your contribution.
+
+Q2. JQL – Time-Sensitive Filters & Workload Tracking
+
+a. Find issues where created >= startOfWeek()
+created >= startOfWeek()
+This shows all issues that were created since the beginning of the current week (Monday).
+
+b. Find all issues resolved in the previous quarter
+resolved >= startOfQuarter(-1) AND resolved <= endOfQuarter(-1)
+This returns all issues that were resolved in the last quarter, using dynamic date functions.
+
+c. Show unresolved issues due within the next 7 days and assigned to your team
+due <= 7d AND resolution = Unresolved AND assignee in membersOf("Your-Team-Group")
+This shows tasks that are due within the next 7 days, are still unresolved, and are assigned to members of a specific team.
+
+Explanation: Time Functions in JQL
+startOfWeek()
+Represents the start of the current week (Monday 00:00).
+Useful for weekly reports and current workload tracking.
+
+startOfQuarter(-1) / endOfQuarter(-1)
+startOfQuarter(-1) gives the start of the previous quarter.
+endOfQuarter(-1) gives the end of the previous quarter.
+Useful for quarterly retrospectives and performance analysis.
+<= 7d
+
+Used to find issues due in the next 7 days from today.
+Helps in planning, reminders, and deadline track
 
 
 
