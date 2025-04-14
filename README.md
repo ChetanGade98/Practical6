@@ -346,7 +346,59 @@ In service-based teams, this improves response times, customer satisfaction, and
 
 Set 7
 
+Q1. Jira Scenario – Scrum Project Setup
+1. Create the Project
 
+Go to Jira, click on “Projects” > “Create project”.
+Choose the Scrum template (under Software Development).
+Name your project (e.g., “My Scrum Project”) and set a key.
+Select either a Team-managed or Company-managed project (Team-managed is simpler for small teams).
+Click “Create”.
+
+2. Set up a Board and Sprints
+A Scrum board is automatically created with the project.
+Go to the “Backlog” tab.
+Click “Create Sprint” to prepare your first sprint.
+
+3. Add Backlog Items
+In the backlog, click “Create issue” to add user stories, tasks, or bugs.
+
+Example:
+Story: "As a user, I want to reset my password"
+Task: "Design login UI"
+Drag issues into the sprint section to plan your upcoming sprint.
+
+4. Start and Manage a Sprint
+Click “Start Sprint” on the sprint section.
+Set a name, start date, end date, and duration (typically 2 weeks).
+Once started, manage tasks on the board through stages like To Do, In Progress, and Done.
+At the end, click “Complete Sprint” — unresolved issues can be moved to the next sprint or back to the backlog.
+
+Q2. JQL – Team Assignment and Status Filters
+a. Find all unresolved tasks assigned to Team-A
+assignee in membersOf("Team-A") AND resolution = Unresolved AND issuetype = Task
+This lists all tasks assigned to Team-A that are not yet resolved.
+
+b. Find issues currently in "Blocked" status for more than 2 days
+status = Blocked AND status changed TO Blocked BEFORE -2d
+This helps identify items that have been in the "Blocked" status for over 2 days.
+
+c. List all bugs assigned to your name and in "In Review"
+assignee = currentUser() AND status = "In Review" AND issuetype = Bug
+This shows all bugs currently in the “In Review” status and assigned to you.
+Why Team-Level JQL Filters Are Valuable on Sprint Dashboards
+Improved visibility: Teams see only their relevant tasks and progress.
+Focused work: Filters eliminate distractions by excluding unrelated work items.
+Accountability: Helps managers and team leads monitor each team’s workload.
+Sprint progress tracking: Teams can quickly spot delays or blockers.
+Custom automation and alerts: Filters power dashboards, SLA monitoring, and notifications.
+
+Example: A filter like
+status = Blocked AND assignee in membersOf("Team-A")
+on a dashboard ensures Team-A sees and resolves blockers quickly.
+
+
+Set 8
 
 
 
