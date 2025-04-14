@@ -169,7 +169,69 @@ status CHANGED FROM "In Progress" TO "Testing" AFTER "2025-04-01"
 Difference: updated >= -3d vs created >= -3d
 Tip: Use updated for tracking activity or progress, and created to identify recent backlog entries or incoming tasks.
 
-Set 3
+Set 4
+
+Q1. Git Scenario – Resolve Merge Conflict
+Scenario: You and your teammate edited the same file in different branches. Now there's a merge conflict.
+1. How to view the conflict
+After trying to merge:
+git merge teammate-branch
+You’ll see an error like:
+Auto-merging filename.js
+CONFLICT (content): Merge conflict in filename.js
+Automatic merge failed; fix conflicts and then commit the result.
+To view conflicted files:
+git status
+You’ll see something like:
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   filename.js
+In the file itself, conflicts are marked like this:
+<<<<<<< HEAD
+Your changes in current branch
+=======
+Teammate’s changes from merged branch
+>>>>>>> teammate-branch
+
+
+2. How to resolve it locally
+Open the conflicted file in a text editor or IDE
+Manually choose which changes to keep (or combine both)
+Remove the conflict markers (<<<<<<<, =======, >>>>>>>)
+After resolving:
+git add filename.js
+
+3. How to commit and complete the merge
+git commit -m "Resolved merge conflict in filename.js"
+Now the merge is complete. You can push the result:
+git push
+
+Q2. JQL – Component, Labels, and Sprint Filters
+
+a. Find all issues in the Frontend component that are unresolved
+component = Frontend AND resolution = EMPTY
+
+
+b. List issues labeled as urgent or production-fix
+labels in (urgent, production-fix)
+
+c. Show all issues in the current sprint and assigned to your team
+sprint in openSprints() AND team = "Your Team Name"
+(If team is not a custom field in your JIRA setup, use a group of assignees instead.)
+Alternatively:
+sprint in openSprints() AND assignee in membersOf("your-team-group")
+
+Labels vs Components – When to Use What
+Use labels when:
+You want to quickly tag cross-cutting concerns or priorities
+You need ad-hoc filters (like bugfix, QA-needed, hotfix)
+
+Use components when:
+You want to assign ownership to teams/modules
+You want structured, consistent categorization
+
+Set 5
+
 
 
 
