@@ -232,7 +232,64 @@ You want structured, consistent categorization
 
 Set 5
 
+Q1. GitHub Scenario – Team Collaboration
 
+Steps to follow when working on a group project:
+
+1. Create a new GitHub repository:
+Go to GitHub
+Click "New repository"
+
+Fill in:
+Repository name (e.g., group-project)
+Set visibility (public/private)
+Check “Add a README file”
+Click "Create repository"
+
+2. Add a README.md
+(If skipped during creation):
+Go to the repo → Click "Add file" > "Create new file"
+Name it README.md, add initial content
+Commit the file to the main branch
+
+3. Invite your team for collaboration:
+Go to the repo → Settings > Collaborators
+Click “Invite a collaborator”
+Enter their GitHub username or email
+They will receive an invite to accept
+
+4. Set up branch protection on main to require pull requests:
+
+Go to Settings > Branches > Add rule
+Under "Branch name pattern", type: main
+Enable:
+Require pull request reviews before merging
+(Optional) Require status checks to pass before merging
+Click Create or Save changes
+
+Q2. JQL – Release Readiness Queries
+
+a. Find all issues targeted for fixVersion = "v2.0"
+fixVersion = "v2.0"
+
+b. List bugs in v2.0 that are still unresolved
+fixVersion = "v2.0" AND issuetype = Bug AND resolution = EMPTY
+
+c. Find tasks in v2.0 that were resolved in the last 7 days
+fixVersion = "v2.0" AND issuetype = Task AND resolved >= -7d
+
+Why fixVersion is useful for managing product releases
+The fixVersion field in Jira helps you organize and track which issues are planned for or completed in a specific product release version.
+
+Benefits:
+Release Planning: Helps teams plan which features/bugs go into each release (e.g., v2.0, v2.1)
+Progress Tracking: Shows what’s done vs pending for that version
+Release Notes: Jira can generate release notes based on fixVersion
+Clarity: Keeps the team aligned on what’s ready for production and what’s not
+In short: fixVersion links issues directly to product versions, making it essential for structured, reliable releases.
+
+
+Set 5
 
 
 
