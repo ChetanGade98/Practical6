@@ -101,6 +101,33 @@ You want to track only high-priority issues in your project. How would you creat
 Answer:
 Use JQL filter like this:
 Steps:
+1.	Go to Filters > Advanced Issue Search.
+2.	Enter query:
+priority = High
+3.	Click Save As, give it a name, and save the filter.
+________________________________________
+I'll continue with Set 4 to Set 8 next. Shall I go on?
+4o
+You said:
+yes
+ChatGPT said:
+Continuing with the remaining sets from Batch 1, here are the answers for:
+________________________________________
+Set 4:
+1. Local Git Initialization:
+You’ve just created a new project folder on your local machine. How would you initialize a Git repository and link it to your GitHub repository?
+Answer:
+Steps:
+1.	Open terminal and navigate to the project folder:
+cd your-project-folder
+2.	Initialize Git locally:
+git init
+3.	Add files:
+git add .
+4.	Commit:
+git commit -m "Initial commit"
+5.	Add remote GitHub repo:
+git remote add origin https://github.com/yourusername/your-repo.git
 
 
 
