@@ -49,6 +49,32 @@ Steps:
 ________________________________________
 2. Jira Scrum Project:
 Your team is following the Scrum methodology. How would you create and configure a new Scrum project in Jira?
+Answer:
+To create a Scrum project:
+Steps:
+1.	Log in to Jira Cloud.
+2.	Click Projects > Create Project.
+3.	Select the Scrum template.
+4.	Enter project details and click Create.
+5.	Configure boards and sprints from the project’s sidebar.
+________________________________________
+3. Git Branching:
+You want to create a new feature without affecting the main code. How would you create a new branch, switch to it, and merge it back once the feature is complete?
+Answer:
+Use Git branching as follows:
+Steps:
+1.	Create new branch:
+git branch feature-branch
+2.	Switch to it:
+git checkout feature-branch
+3.	After coding, switch back to main:
+git checkout main
+4.	Merge the branch:
+git merge feature-branch
+________________________________________
+Set 3:
+1. Git Installation:
+You’ve set up a new laptop and need to configure Git with your GitHub account. What steps would you take to install Git and link it with your GitHub username and email?
 
 
 
