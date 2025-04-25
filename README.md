@@ -1200,6 +1200,11 @@ git commit
 2.	Pull remote updates without losing local changes:
 Steps:
 bash
+CopyEdit
+git stash         # Stash local changes
+git pull origin master  # Pull remote changes
+git stash pop     # Apply stashed changes back
+.	
 
 
 
