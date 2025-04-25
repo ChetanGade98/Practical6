@@ -153,6 +153,59 @@ o	Filter Results for open issues.
 o	Sprint Burndown for active sprint.
 o	Two Dimensional Filter Statistics for completed tasks.
 4.	Save and arrange widgets as needed.
+Set 5:
+1. Jira Navigation:
+How would you find the sprint backlog and the active sprint board?
+Answer:
+Steps:
+1.	Open the Jira project.
+2.	In the sidebar, click on Backlog to view sprint backlog.
+3.	Click Active sprints to see the current sprint board.
+________________________________________
+2. Git Commit:
+What Git commands would you use to add the file and commit the changes with a descriptive message?
+Answer:
+Steps:
+1.	Add the modified file:
+git add filename.ext
+2.	Commit with a message:
+git commit -m "Updated XYZ functionality"
+________________________________________
+3. Git Merge:
+What steps would you follow to merge a feature branch into the main branch smoothly?
+Answer:
+Steps:
+1.	Switch to main branch:
+git checkout main
+2.	Pull latest changes:
+git pull origin main
+3.	Merge feature branch:
+git merge feature-branch
+4.	Push merged changes:
+git push origin main
+________________________________________
+Set 6:
+1. GitHub Setup:
+How would you create a GitHub repository with a README.md and .gitignore for .java files?
+Answer:
+Steps:
+1.	Go to GitHub and click New repository.
+2.	Enter repo name and description.
+3.	Check the boxes for:
+o	Add README.md
+o	.gitignore > Java
+4.	Click Create repository.
+________________________________________
+2. Jira Epic Creation:
+How would you create an epic in Jira and link relevant stories to it?
+Answer:
+Steps:
+1.	Click Create > Select Epic as issue type.
+2.	Enter details and click Create.
+3.	To link stories:
+o	Open story issue
+o	In the Epic Link field, choose the created epic.
+________________________________________
 
 
 
