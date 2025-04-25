@@ -296,6 +296,168 @@ git push origin main
 ________________________________________
 3. JQL Search:
 Find issues with the label “Bug” created in the last 7 days.
+Answer:
+JQL Query:
+labels = Bug AND created >= -7d
+________________________________________
+Set 10:
+1. GitHub Repository Setup:
+How would you create a repository, add a license file, and enable branch protection rules?
+Answer:
+Steps:
+1.	Go to https://github.com > New Repository.
+2.	Fill repo details, check Add a license.
+3.	After creation, go to Settings > Branches.
+4.	Under Branch protection rules, click Add rule.
+5.	Add rule for main and enable “Require pull request reviews”.
+________________________________________
+2. Jira Sprint Creation:
+How would you create a sprint and move backlog items into it?
+Answer:
+Steps:
+1.	Go to the Jira project’s Backlog view.
+2.	Click Create Sprint at the top.
+3.	Drag backlog issues into the sprint area.
+4.	Click Start Sprint, set start and end dates.
+________________________________________
+3. Git Branch Creation:
+How would you create a new branch, switch to it, and push it to GitHub?
+Answer:
+Steps:
+1.	Create branch:
+git checkout -b feature-branch
+2.	Push to GitHub:
+git push -u origin feature-branch
+________________________________________
+Set 11:
+1. Git Installation and Configuration:
+How would you install Git and configure it with your GitHub credentials?
+Answer:
+Steps:
+1.	Install Git:
+sudo apt update && sudo apt install git -y
+2.	Set username:
+git config --global user.name "Your Name"
+3.	Set email:
+git config --global user.email "you@example.com"
+________________________________________
+2. Jira Issue Creation:
+How would you create a Jira issue, set the priority to "High," and assign it to a developer?
+Answer:
+Steps:
+1.	Click Create in Jira.
+2.	Select project and issue type (e.g., Bug or Task).
+3.	Enter summary and description.
+4.	Set priority to High.
+5.	Assign to a developer.
+6.	Click Create.
+________________________________________
+3. Jira Dashboard Setup:
+How would you create and configure a dashboard showing sprint progress and issue breakdown?
+Answer:
+Steps:
+1.	Go to Dashboards > Create Dashboard.
+2.	Name it, set permissions, and click Create.
+3.	Click Add Gadget.
+4.	Add:
+o	Sprint Health
+o	Issue Statistics
+o	Two Dimensional Filter Stats
+5.	Configure each gadget using saved filters.
+________________________________________
+Set 12:
+1. Local Git Initialization:
+How would you initialize it as a Git repository and link it to GitHub?
+Answer:
+Steps:
+1.	Navigate to folder:
+cd project-folder
+2.	Initialize Git:
+git init
+3.	Add files:
+git add .
+4.	Commit:
+git commit -m "Initial commit"
+5.	Add remote:
+git remote add origin https://github.com/your/repo.git
+6.	Push:
+git push -u origin main
+________________________________________
+2. Git Pull and Merge:
+How would you pull changes and handle merge conflicts?
+Answer:
+Steps:
+1.	Pull changes:
+git pull origin main
+2.	If merge conflicts occur, open files and resolve them.
+3.	After resolving, stage files:
+git add conflicted-file
+4.	Commit:
+git commit -m "Resolved merge conflicts"
+________________________________________
+3. Jira Filter Creation:
+How would you create a JQL filter and share it with the team?
+Answer:
+Steps:
+1.	Go to Filters > Advanced Issue Search.
+2.	Write query:
+assignee in (membersOf("team-name")) AND resolution = Unresolved
+3.	Click Save As, name the filter.
+4.	Go to Manage filters > Share to share with team.
+________________________________________
+Set 13:
+1. Jira Project Setup:
+How would you set up a new Scrum project in Jira and configure permissions?
+Answer:
+Steps:
+1.	Go to Projects > Create Project.
+2.	Select Scrum and click Use template.
+3.	Fill in project name and click Create.
+4.	Go to Project settings > People, add client emails and assign roles.
+________________________________________
+2. Git Add and Commit:
+How would you stage only specific files and commit?
+Answer:
+Steps:
+1.	Stage selected files:
+git add file1.js file2.css
+2.	Commit:
+git commit -m "Updated styles and scripts"
+3.	Push:
+git push origin main
+________________________________________
+3. Git Merge:
+How to merge a branch into main without fast-forwarding?
+Answer:
+Steps:
+1.	Switch to main:
+git checkout main
+2.	Pull latest:
+git pull origin main
+3.	Merge with no fast-forward:
+git merge --no-ff feature-branch
+4.	Push changes:
+git push origin main
+________________________________________
+Set 14:
+1. GitHub Repository Collaboration:
+How would you invite an external developer and set access?
+Answer:
+Steps:
+1.	Go to repo > Settings > Collaborators.
+2.	Click Invite a collaborator.
+3.	Enter GitHub username and click Add.
+4.	Set access to Read, Write, or Admin as needed.
+________________________________________
+2. Jira Epic and Story Linking:
+How would you create an epic and link stories to it?
+Answer:
+Steps:
+1.	Create an Epic via Create > Issue Type > Epic.
+2.	Add title and description, then click Create.
+3.	Open a story issue.
+4.	In Epic Link, select your epic.
+________________________________________
 
 
 
