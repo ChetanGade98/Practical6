@@ -128,6 +128,31 @@ git add .
 git commit -m "Initial commit"
 5.	Add remote GitHub repo:
 git remote add origin https://github.com/yourusername/your-repo.git
+6.	Push to GitHub:
+git push -u origin main
+________________________________________
+2. Git Push and Pull:
+How would you pull updates into your local repository without losing your work?
+Answer:
+Steps:
+1.	Save any current changes using:
+git add . && git commit -m "Saving local changes"
+2.	Pull updates from GitHub:
+git pull origin main
+3.	If conflicts occur, resolve them manually and re-commit:
+git commit -m "Resolved merge conflicts"
+________________________________________
+3. Jira Dashboard:
+You need to create a dashboard in Jira showing open issues, active sprints, and completed tasks.
+Answer:
+Steps:
+1.	Go to Jira and click Dashboards > Create dashboard.
+2.	Name the dashboard and set visibility.
+3.	Add gadgets:
+o	Filter Results for open issues.
+o	Sprint Burndown for active sprint.
+o	Two Dimensional Filter Statistics for completed tasks.
+4.	Save and arrange widgets as needed.
 
 
 
