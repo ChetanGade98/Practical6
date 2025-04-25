@@ -75,6 +75,32 @@ ________________________________________
 Set 3:
 1. Git Installation:
 You’ve set up a new laptop and need to configure Git with your GitHub account. What steps would you take to install Git and link it with your GitHub username and email?
+Answer:
+Use Ubuntu terminal:
+Steps:
+1.	Install Git:
+sudo apt update && sudo apt install git -y
+2.	Set username:
+git config --global user.name "Your Name"
+3.	Set email:
+git config --global user.email "you@example.com"
+________________________________________
+2. Jira Issue Creation:
+You’ve identified a bug in the project. How would you create an issue in Jira, classify it under the appropriate epic, and assign it to a developer?
+Answer:
+Create and assign an issue in Jira:
+Steps:
+1.	Go to the project board.
+2.	Click Create in the top menu.
+3.	Fill in the summary, issue type as Bug, and link it to the relevant epic.
+4.	Set the priority and assign the developer.
+5.	Click Create.
+________________________________________
+3. Jira Filter Creation:
+You want to track only high-priority issues in your project. How would you create a JQL filter and save it for future use?
+Answer:
+Use JQL filter like this:
+Steps:
 
 
 
