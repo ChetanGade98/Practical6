@@ -257,6 +257,45 @@ Steps:
 3.	Add title, description, acceptance criteria, priority.
 4.	Assign to a developer or team.
 5.	Click Create.
+3. Git Branching:
+How would you create a separate branch for a hotfix and merge it into main without affecting the other feature branch?
+Answer:
+Steps:
+1.	Create hotfix branch:
+git checkout -b hotfix-branch
+2.	Make changes, then commit:
+git add .
+git commit -m "Hotfix implemented"
+3.	Switch to main and merge:
+git checkout main
+git merge hotfix-branch
+ 
+________________________________________
+Set 9:
+1. Jira Cloud Instance:
+How would you create user accounts and assign project roles within your Jira Cloud instance?
+Answer:
+Steps:
+1.	Log in to Jira Cloud as an admin.
+2.	Go to Settings > User Management.
+3.	Click Invite users, enter emails, and select product access.
+4.	Open the project, go to Project Settings > People.
+5.	Add users and assign roles like Developer, Admin, etc.
+________________________________________
+2. Git Commit and Push:
+How would you stage all the changes, commit them with a message, and push them to GitHub?
+Answer:
+Steps:
+1.	Open terminal and navigate to your project.
+2.	Stage all files:
+git add .
+3.	Commit with message:
+git commit -m "Updated project files"
+4.	Push to GitHub:
+git push origin main
+________________________________________
+3. JQL Search:
+Find issues with the label “Bug” created in the last 7 days.
 
 
 
