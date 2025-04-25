@@ -206,6 +206,57 @@ Steps:
 o	Open story issue
 o	In the Epic Link field, choose the created epic.
 ________________________________________
+3. JQL Search:
+What JQL query would you use to find all issues in the current sprint that are still open?
+Answer:
+JQL Query:
+sprint in openSprints() AND resolution = Unresolved
+________________________________________
+Set 7:
+1. Git Commit:
+How would you add a file and commit the changes with a message?
+Answer:
+Steps:
+1.	Stage the file:
+git add filename.ext
+2.	Commit it:
+git commit -m "Added new changes to XYZ"
+________________________________________
+2. Git Pull:
+How would you pull changes from main without conflicts?
+Answer:
+Steps:
+1.	Make sure your branch is clean:
+git status
+2.	Pull changes:
+git pull origin main
+3.	If conflicts appear, resolve and commit again.
+________________________________________
+3. Jira Board Configuration:
+How would you configure a Kanban board in Jira and customize its columns?
+Answer:
+Steps:
+1.	Go to Project settings > Boards > Create Board.
+2.	Choose Kanban template.
+3.	Name the board and select a project.
+4.	Click Board settings > Columns to add or rename columns.
+________________________________________
+Set 8:
+1. JQL Search:
+Find all Jira issues assigned to you with the status "In Progress".
+Answer:
+JQL Query:
+assignee = currentUser() AND status = "In Progress"
+________________________________________
+2. Jira Story Creation:
+How would you create a Jira story with appropriate details and assign it to the development team?
+Answer:
+Steps:
+1.	Click Create in Jira.
+2.	Choose issue type: Story.
+3.	Add title, description, acceptance criteria, priority.
+4.	Assign to a developer or team.
+5.	Click Create.
 
 
 
