@@ -477,3 +477,87 @@ Industry Use: Oracle is favored in enterprise environments for high-performance 
 
 Q8
 
+8) DDL and DML Commands – Library / Books Table
+a) Create a Library database and Books table:
+sql
+Copy
+Edit
+-- In some systems, databases are created at a higher level:
+-- CREATE DATABASE Library;
+
+-- Use the database (varies by RDBMS)
+-- USE Library;
+
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(200),
+    Author VARCHAR(100),
+    Genre VARCHAR(50),
+    Price DECIMAL(10,2)
+);
+b) Insert five sample records and verify:
+sql
+Copy
+Edit
+INSERT INTO Books VALUES
+(1, 'Clean Code', 'Robert C. Martin', 'Programming', 550.00),
+(2, 'Deep Work', 'Cal Newport', 'Productivity', 400.00),
+(3, 'Sapiens', 'Yuval Noah Harari', 'History', 600.00),
+(4, 'The Pragmatic Programmer', 'Andrew Hunt', 'Programming', 500.00),
+(5, 'AI Superpowers', 'Kai-Fu Lee', 'Technology', 450.00);
+
+-- Display all records
+SELECT * FROM Books;
+c) Add PublicationYear column using ALTER TABLE:
+sql
+Copy
+Edit
+ALTER TABLE Books
+ADD PublicationYear INT;
+
+-- Optional: Update sample data
+UPDATE Books SET PublicationYear = 2008 WHERE BookID = 1;
+UPDATE Books SET PublicationYear = 2016 WHERE BookID = 2;
+UPDATE Books SET PublicationYear = 2011 WHERE BookID = 3;
+UPDATE Books SET PublicationYear = 1999 WHERE BookID = 4;
+UPDATE Books SET PublicationYear = 2018 WHERE BookID = 5;
+d) Update price of all books published before 2020 by 10%:
+sql
+Copy
+Edit
+UPDATE Books
+SET Price = Price * 1.10
+WHERE PublicationYear < 2020;
+e) Delete books where genre is ‘Outdated Technology’ and validate:
+sql
+Copy
+Edit
+-- First, insert a sample book in that genre for testing
+INSERT INTO Books VALUES (6, 'COBOL Programming', 'Jane Doe', 'Outdated Technology', 300.00, 1980);
+
+-- Now delete
+DELETE FROM Books
+WHERE Genre = 'Outdated Technology';
+
+-- Validate deletion
+SELECT * FROM Books;
+Technology Insight:
+Tool: CockroachDB
+
+Key Features:
+
+Distributed SQL database designed for high availability and resilience
+
+Strong consistency with support for ACID transactions
+
+Scales horizontally with automatic replication and fault tolerance
+
+PostgreSQL-compatible SQL interface
+
+Ideal for global applications due to geo-partitioning support
+
+Industry Use: Used in fintech, SaaS, and global apps where uptime, data consistency, and scalability are critical, often replacing legacy RDBMS with cloud-native architecture.
+
+Q9
+
+
