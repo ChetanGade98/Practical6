@@ -123,6 +123,72 @@ Seamless integration with Azure services (e.g., Power BI, Data Factory)
 
 Industry Use: Used for scalable web and enterprise applications, real-time analytics, and multi-tenant SaaS platforms due to its robustness, elasticity, and security.
 
+Q3  
+
+3) Customer Table with Integrity Constraints
+a) Create Customers table with constraints:
+sql
+Copy
+Edit
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100) UNIQUE,
+    Age INT CHECK (Age > 18),
+    Country VARCHAR(50) DEFAULT 'India'
+);
+b) Insert valid customer (without specifying Country):
+sql
+Copy
+Edit
+INSERT INTO Customers (CustomerID, Name, Email, Age) 
+VALUES (1, 'Raj Verma', 'raj.verma@example.com', 28);
+
+-- Verify default country
+SELECT * FROM Customers WHERE CustomerID = 1;
+c) Attempt to insert customer with age 16 (CHECK constraint violation):
+sql
+Copy
+Edit
+-- This will result in an error
+INSERT INTO Customers (CustomerID, Name, Email, Age)
+VALUES (2, 'Ankit Sharma', 'ankit.sharma@example.com', 16);
+d) Try inserting two customers with same Email ID (UNIQUE constraint violation):
+sql
+Copy
+Edit
+-- First insert (valid)
+INSERT INTO Customers (CustomerID, Name, Email, Age)
+VALUES (3, 'Meena Jain', 'meena.jain@example.com', 30);
+
+-- Duplicate email (will result in error)
+INSERT INTO Customers (CustomerID, Name, Email, Age)
+VALUES (4, 'Asha Rani', 'meena.jain@example.com', 35);
+e) Retrieve customers older than 25 and not from 'India':
+sql
+Copy
+Edit
+SELECT * FROM Customers 
+WHERE Age > 25 AND Country <> 'India';
+Technology Insight:
+Tool: MongoDB (with schema validation using Mongoose or native JSON Schema)
+
+Key Features:
+
+NoSQL document database, stores data in JSON-like BSON format
+
+Highly scalable, supports sharding and replication
+
+Allows flexible schema, but schema validation is supported
+
+Aggregation pipeline for advanced analytics
+
+Powerful indexing and geospatial query capabilities
+
+Industry Use: Widely used for modern web applications, content management systems, IoT platforms, and real-time analytics where flexible and dynamic data models are needed.
+
+Q4
+
 
 
 
