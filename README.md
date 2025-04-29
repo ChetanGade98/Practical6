@@ -560,4 +560,67 @@ Industry Use: Used in fintech, SaaS, and global apps where uptime, data consiste
 
 Q9
 
+9) DDL and DML Commands (Books Table)
+a) Create Books table:
+sql
+Copy
+Edit
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(200),
+    Author VARCHAR(100),
+    Price DECIMAL(10,2),
+    StockAvailable INT
+);
+b) Insert 5 book records:
+sql
+Copy
+Edit
+INSERT INTO Books VALUES
+(1, 'Atomic Habits', 'James Clear', 450.00, 10),
+(2, 'Zero to One', 'Peter Thiel', 500.00, 5),
+(3, 'The Lean Startup', 'Eric Ries', 600.00, 0),
+(4, 'Digital Minimalism', 'Cal Newport', 350.00, 7),
+(5, 'Start With Why', 'Simon Sinek', 400.00, 0);
+c) Modify table to add a new column Genre:
+sql
+Copy
+Edit
+ALTER TABLE Books
+ADD Genre VARCHAR(100);
+d) Increase the price of all books by ₹50:
+sql
+Copy
+Edit
+UPDATE Books
+SET Price = Price + 50;
+e) Delete all records where StockAvailable is 0:
+sql
+Copy
+Edit
+DELETE FROM Books
+WHERE StockAvailable = 0;
+
+-- Verify remaining records
+SELECT * FROM Books;
+Technology Insight:
+Tool: Firebase Realtime Database
+
+Key Features:
+
+NoSQL cloud database that syncs data in real-time across all clients
+
+Designed for mobile and web apps with offline capabilities
+
+JSON-based, highly responsive with event-driven updates
+
+Integrates easily with Firebase Authentication and Firebase Cloud Functions
+
+Minimal setup for rapid prototyping and deployment
+
+Industry Use: Commonly used in mobile applications, chat systems, real-time collaboration tools, and MVPs due to its ease of integration and live-sync capabilities.
+
+Q10
+
+
 
