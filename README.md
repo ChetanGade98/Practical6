@@ -412,3 +412,68 @@ Industry Use: BigQuery is used for large-scale data analytics, marketing intelli
 
 Q7
 
+7) Employees Table with Constraints
+a) Create the Employees table with constraints:
+sql
+Copy
+Edit
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Salary DECIMAL(10,2) CHECK (Salary > 10000),
+    Status VARCHAR(20) DEFAULT 'Active'
+);
+b) Try inserting a record without Name (NOT NULL violation):
+sql
+Copy
+Edit
+-- This will fail due to NOT NULL constraint
+INSERT INTO Employees (EmployeeID, Email, Salary)
+VALUES (1, 'test@example.com', 15000.00);
+c) Insert a record without specifying Status (check DEFAULT):
+sql
+Copy
+Edit
+INSERT INTO Employees (EmployeeID, Name, Email, Salary)
+VALUES (2, 'Nitin Verma', 'nitin@example.com', 20000.00);
+
+-- Check the default value applied
+SELECT * FROM Employees WHERE EmployeeID = 2;
+d) Insert a record with Salary < 10000 (CHECK constraint):
+sql
+Copy
+Edit
+-- This will fail due to CHECK constraint
+INSERT INTO Employees (EmployeeID, Name, Email, Salary)
+VALUES (3, 'Simran Kaur', 'simran@example.com', 8000.00);
+e) Insert two records with same Email ID (UNIQUE violation):
+sql
+Copy
+Edit
+-- First insert (valid)
+INSERT INTO Employees (EmployeeID, Name, Email, Salary)
+VALUES (4, 'Rahul Joshi', 'rahul@example.com', 30000.00);
+
+-- Second insert with same email (will cause UNIQUE constraint violation)
+INSERT INTO Employees (EmployeeID, Name, Email, Salary)
+VALUES (5, 'Anjali Rao', 'rahul@example.com', 32000.00);
+Technology Insight:
+Tool: Oracle Database 23c
+
+Key Features:
+
+Enhanced JSON support with JSON Relational Duality
+
+SQL-based graph queries, AI vector search
+
+Advanced security (Data Redaction, Transparent Data Encryption)
+
+Multitenant architecture and automatic indexing
+
+Designed for hybrid cloud and on-premises deployments
+
+Industry Use: Oracle is favored in enterprise environments for high-performance transaction processing, complex security requirements, and robust data integrity management.
+
+Q8
+
