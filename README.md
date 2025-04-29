@@ -268,6 +268,72 @@ ACID compliant and supports MVCC (multi-version concurrency control)
 
 Industry Use: Used in financial services, e-commerce, government, and analytics-heavy environments due to its reliability, data integrity, and performance.
 
+Q5
+
+5) Create an Employee Table with Various Columns
+a) Create the Employee table:
+sql
+Copy
+Edit
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Salary DECIMAL(10,2),
+    JoiningDate DATE,
+    ActiveStatus BOOLEAN
+);
+b) Insert five sample employee records:
+sql
+Copy
+Edit
+INSERT INTO Employee VALUES 
+(1, 'Amit Sharma', 60000.00, '2022-12-15', TRUE),
+(2, 'Neha Gupta', 50000.00, '2023-03-10', TRUE),
+(3, 'Rajeev Bansal', 45000.00, '2024-01-05', FALSE),
+(4, 'Pooja Mehta', 70000.00, '2021-11-01', TRUE),
+(5, 'Rohit Kumar', 55000.00, '2023-07-20', TRUE);
+c) Find employees who joined before January 1, 2023:
+sql
+Copy
+Edit
+SELECT * FROM Employee
+WHERE JoiningDate < '2023-01-01';
+d) Update Amit Sharma’s salary by 10% and show updated record:
+sql
+Copy
+Edit
+UPDATE Employee 
+SET Salary = Salary * 1.10
+WHERE Name = 'Amit Sharma';
+
+SELECT * FROM Employee
+WHERE Name = 'Amit Sharma';
+e) Retrieve all active employees:
+sql
+Copy
+Edit
+SELECT * FROM Employee
+WHERE ActiveStatus = TRUE;
+Technology Insight:
+Tool: Amazon RDS (Relational Database Service)
+
+Key Features:
+
+Fully managed service for SQL databases (MySQL, PostgreSQL, SQL Server, Oracle, etc.)
+
+Automated backups, patching, and failover
+
+Scalability with read replicas
+
+Integrated monitoring and security features (IAM, VPC)
+
+Multi-AZ deployments for high availability
+
+Industry Use: Popular in cloud-native applications and SaaS platforms for reducing DBA overhead while ensuring high availability, security, and performance of relational databases.
+
+
+Q6
+
 
 
 
