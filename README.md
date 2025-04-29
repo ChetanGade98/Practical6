@@ -621,6 +621,84 @@ Minimal setup for rapid prototyping and deployment
 Industry Use: Commonly used in mobile applications, chat systems, real-time collaboration tools, and MVPs due to its ease of integration and live-sync capabilities.
 
 Q10
+10) Analyze Sales Performance Using Aggregate Functions
+a) Create Sales table:
+sql
+Copy
+Edit
+CREATE TABLE Sales (
+    SaleID INT PRIMARY KEY,
+    ProductID INT,
+    ProductName VARCHAR(100),
+    Quantity INT,
+    Discount DECIMAL(5,2),
+    SaleAmount DECIMAL(10,2),
+    SalesPerson VARCHAR(100),
+    SaleDate DATE
+);
+Insert sample data:
+sql
+Copy
+Edit
+INSERT INTO Sales VALUES
+(1, 101, 'Laptop', 2, 5.00, 140000.00, 'Ravi', '2025-03-05'),
+(2, 102, 'Mouse', 5, 2.00, 2500.00, 'Anjali', '2025-03-06'),
+(3, 103, 'Keyboard', 3, 1.50, 3600.00, 'Ravi', '2025-03-10'),
+(4, 104, 'Monitor', 1, 10.00, 15000.00, 'Sunita', '2025-02-15'),
+(5, 105, 'Printer', 1, 5.00, 8000.00, 'Ravi', '2025-03-01'),
+(6, 106, 'Webcam', 4, 3.00, 6000.00, 'Sunita', '2025-02-20'),
+(7, 101, 'Laptop', 1, 6.00, 70000.00, 'Anjali', '2025-03-18');
+a) Total quantity of products sold:
+sql
+Copy
+Edit
+SELECT SUM(Quantity) AS TotalQuantitySold
+FROM Sales;
+b) Average sale amount in March 2025:
+sql
+Copy
+Edit
+SELECT AVG(SaleAmount) AS AvgMarchSaleAmount
+FROM Sales
+WHERE MONTH(SaleDate) = 3 AND YEAR(SaleDate) = 2025;
+c) Product with the minimum sale quantity:
+sql
+Copy
+Edit
+SELECT ProductName, Quantity
+FROM Sales
+WHERE Quantity = (SELECT MIN(Quantity) FROM Sales);
+d) Maximum discount offered in February 2025:
+sql
+Copy
+Edit
+SELECT MAX(Discount) AS MaxDiscountFeb
+FROM Sales
+WHERE MONTH(SaleDate) = 2 AND YEAR(SaleDate) = 2025;
+e) Sales count by each SalesPerson:
+sql
+Copy
+Edit
+SELECT SalesPerson, COUNT(*) AS SalesCount
+FROM Sales
+GROUP BY SalesPerson;
+Technology Insight:
+Tool: Databricks (with Delta Lake)
+
+Key Features:
+
+Unified analytics platform built on Apache Spark
+
+Supports both batch and real-time processing
+
+Delta Lake provides ACID transactions and scalable metadata handling on data lakes
+
+Optimized for ML, streaming, and big data workflows
+
+SQL, Python, Scala, and R interfaces supported
+
+Industry Use: Used in data engineering, machine learning pipelines, and big data analytics—especially in companies dealing with massive volumes of structured and unstructured data.
+
 
 
 
