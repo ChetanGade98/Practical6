@@ -61,7 +61,67 @@ Industry Use: Used for real-time analytics, big data warehousing, and ELT pipeli
 
 
 Q2)
+2) Use DDL and DML Commands
+a) Create Products table:
+sql
+Copy
+Edit
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Price DECIMAL(10,2),
+    StockQuantity INT
+);
+b) Insert five product records & display:
+sql
+Copy
+Edit
+INSERT INTO Products VALUES 
+(1, 'Laptop', 75000.00, 10),
+(2, 'Mouse', 500.00, 100),
+(3, 'Keyboard', 1200.00, 50),
+(4, 'Monitor', 15000.00, 25),
+(5, 'Printer', 9000.00, 15);
 
+SELECT * FROM Products;
+c) Update price of ProductID = 3 and check:
+sql
+Copy
+Edit
+UPDATE Products SET Price = 1300.00 WHERE ProductID = 3;
+
+SELECT * FROM Products WHERE ProductID = 3;
+d) Delete a product and verify:
+sql
+Copy
+Edit
+DELETE FROM Products WHERE ProductID = 5;
+
+SELECT * FROM Products;
+e) Alter table to add Discount column with default value:
+sql
+Copy
+Edit
+ALTER TABLE Products ADD Discount DECIMAL(4,2) DEFAULT 5.00;
+
+-- Check result
+SELECT * FROM Products;
+Technology Insight:
+Tool: Microsoft Azure SQL Database
+
+Key Features:
+
+Fully managed cloud-based relational database
+
+Auto-patching, high availability (99.99% uptime SLA)
+
+AI-powered performance tuning
+
+Built-in threat detection and security controls
+
+Seamless integration with Azure services (e.g., Power BI, Data Factory)
+
+Industry Use: Used for scalable web and enterprise applications, real-time analytics, and multi-tenant SaaS platforms due to its robustness, elasticity, and security.
 
 
 
