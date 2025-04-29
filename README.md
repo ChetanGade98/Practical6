@@ -189,7 +189,84 @@ Industry Use: Widely used for modern web applications, content management system
 
 Q4
 
+4) EmployeeDetails Table with Constraints
+a) Create Department and EmployeeDetails tables with constraints:
+sql
+Copy
+Edit
+-- First, create Department table
+CREATE TABLE Department (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
+);
 
+-- Sample department data
+INSERT INTO Department VALUES 
+(1, 'HR'),
+(2, 'Finance'),
+(3, 'Engineering');
+
+-- Now create EmployeeDetails table
+CREATE TABLE EmployeeDetails (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(100),
+    DepartmentID INT,
+    Salary DECIMAL(10,2),
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+b) Insert a valid employee, then attempt invalid foreign key:
+sql
+Copy
+Edit
+-- Valid insert
+INSERT INTO EmployeeDetails VALUES 
+(101, 'Ravi Kumar', 1, 55000.00);
+
+-- Invalid insert: DepartmentID = 99 does not exist (will cause error)
+INSERT INTO EmployeeDetails VALUES 
+(102, 'Sunita Rao', 99, 48000.00);
+c) Attempt to insert duplicate EmployeeID:
+sql
+Copy
+Edit
+-- Duplicate primary key (will result in error)
+INSERT INTO EmployeeDetails VALUES 
+(101, 'Ajay Mehta', 2, 60000.00);
+d) Modify Salary column to add UNIQUE constraint and test it:
+sql
+Copy
+Edit
+-- Add UNIQUE constraint
+ALTER TABLE EmployeeDetails
+ADD CONSTRAINT unique_salary UNIQUE (Salary);
+
+-- Insert with same salary as existing employee (will cause error if duplicate)
+INSERT INTO EmployeeDetails VALUES 
+(103, 'Nisha Singh', 3, 55000.00);
+e) Delete employee and ensure referential integrity:
+sql
+Copy
+Edit
+DELETE FROM EmployeeDetails WHERE EmployeeID = 101;
+
+-- Verify deletion
+SELECT * FROM EmployeeDetails;
+Technology Insight:
+Tool: PostgreSQL
+
+Key Features:
+
+Advanced open-source RDBMS with strong SQL compliance
+
+Supports complex queries, window functions, and CTEs
+
+Built-in support for JSON, GIS (PostGIS), and full-text search
+
+Extensive constraint system (check, unique, foreign key, exclusion)
+
+ACID compliant and supports MVCC (multi-version concurrency control)
+
+Industry Use: Used in financial services, e-commerce, government, and analytics-heavy environments due to its reliability, data integrity, and performance.
 
 
 
