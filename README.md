@@ -334,6 +334,79 @@ Industry Use: Popular in cloud-native applications and SaaS platforms for reduci
 
 Q6
 
+6) Sales Table with Aggregate Functions
+a) Create Sales table:
+sql
+Copy
+Edit
+CREATE TABLE Sales (
+    SaleID INT PRIMARY KEY,
+    ProductID INT,
+    ProductName VARCHAR(100),
+    Quantity INT,
+    Discount DECIMAL(5,2),
+    SaleAmount DECIMAL(10,2),
+    SaleDate DATE
+);
+Insert sample data:
+sql
+Copy
+Edit
+INSERT INTO Sales VALUES
+(1, 201, 'Laptop', 2, 5.00, 140000.00, '2025-02-05'),
+(2, 202, 'Mouse', 5, 2.00, 2500.00, '2025-02-10'),
+(3, 203, 'Keyboard', 3, 1.50, 3600.00, '2025-02-15'),
+(4, 204, 'Monitor', 1, 10.00, 15000.00, '2025-01-20'),
+(5, 201, 'Laptop', 1, 5.00, 70000.00, '2025-02-25'),
+(6, 205, 'Webcam', 2, 3.00, 6000.00, '2025-02-12'),
+(7, 202, 'Mouse', 4, 2.00, 2000.00, '2025-03-01');
+a) Total sales in February 2025:
+sql
+Copy
+Edit
+SELECT SUM(SaleAmount) AS TotalSalesFeb2025
+FROM Sales
+WHERE MONTH(SaleDate) = 2 AND YEAR(SaleDate) = 2025;
+b) Average billing amount:
+sql
+Copy
+Edit
+SELECT AVG(SaleAmount) AS AverageBilling
+FROM Sales;
+c) Minimum quantity sold in any transaction:
+sql
+Copy
+Edit
+SELECT MIN(Quantity) AS MinQuantity
+FROM Sales;
+d) Maximum discount applied:
+sql
+Copy
+Edit
+SELECT MAX(Discount) AS MaxDiscount
+FROM Sales;
+e) Count of 'Laptop' transactions:
+sql
+Copy
+Edit
+SELECT COUNT(*) AS LaptopSalesCount
+FROM Sales
+WHERE ProductName = 'Laptop';
+Technology Insight:
+Tool: Google BigQuery
 
+Key Features:
+
+Serverless, highly scalable data warehouse optimized for analytics
+
+Supports standard SQL, real-time analytics, and federated queries across data lakes
+
+Integrates with Google Cloud Storage, Looker Studio, and ML tools
+
+Pay-per-query pricing model
+
+Partitioning, clustering, and automatic optimization for performance
+
+Industry Use: BigQuery is used for large-scale data analytics, marketing intelligence, fraud detection, and business intelligence due to its speed and ability to analyze petabyte-scale data in seconds.
 
 
