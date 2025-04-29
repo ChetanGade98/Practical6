@@ -410,3 +410,5 @@ Partitioning, clustering, and automatic optimization for performance
 Industry Use: BigQuery is used for large-scale data analytics, marketing intelligence, fraud detection, and business intelligence due to its speed and ability to analyze petabyte-scale data in seconds.
 
 
+Q7
+
